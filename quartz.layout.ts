@@ -15,10 +15,7 @@ export const sharedPageComponents: SharedLayout = {
   ],
   afterBody: [],
   footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
-    },
+    links: {},
   }),
 }
 
@@ -39,7 +36,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.RecentNotes(),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({ width: "80%", height: "400px" }),
     Component.Backlinks(),
     Component.DesktopOnly(Component.TableOfContents()),
   ],
