@@ -1,1 +1,1 @@
-This is the place where I can write anything I want and then publish it online to make sure that I can access my notes from anywhere also making sure that I can share my progress.
+All credit for creation of this project goes to Jacky Zhao, I am just using his project and building on it for my personal use.

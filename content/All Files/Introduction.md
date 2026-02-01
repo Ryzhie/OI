@@ -2,10 +2,9 @@
 title: Introduction
 draft: false
 tags:
-publish: true
 ---
 the introduction goes here... : )
 
 this is something different that i am trying right now...
 
-
+hello so one day I was walking around the place and then I fell into a pothole.
