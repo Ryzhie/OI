@@ -5,8 +5,8 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    // Desktop header: title left, controls right
-    Component.DesktopOnly(
+    // Mobile header: stacks everything nicely in a smaller view
+    Component.MobileOnly(
       Component.Flex({
         components: [
           { Component: Component.PageTitle(), grow: true },
@@ -16,21 +16,17 @@ export const sharedPageComponents: SharedLayout = {
       }),
     ),
 
-    // Mobile header: stack for better responsiveness
-    Component.MobileOnly(
-      Component.Flex({
-        components: [{ Component: Component.PageTitle(), grow: true }],
-      }),
-    ),
-    Component.MobileOnly(Component.Spacer()),
-    Component.MobileOnly(
+    // Desktop header: keeps search, darkmode on the right side (more spacious)
+    Component.DesktopOnly(
       Component.Flex({
         components: [
-          { Component: Component.Search(), grow: true },
+          { Component: Component.PageTitle(), grow: true },
+          { Component: Component.Search() },
           { Component: Component.Darkmode() },
         ],
       }),
     ),
+    Component.MobileOnly(Component.Spacer()),
   ],
   afterBody: [],
   footer: Component.Footer({
@@ -47,30 +43,27 @@ export const defaultContentPageLayout: PageLayout = {
     }),
 
     Component.ArticleTitle(),
-
-    // Meta + tags stay near title (good on mobile)
     Component.ContentMeta(),
     Component.TagList(),
 
-    // Mobile-only TOC: navigation without a right sidebar
-    Component.MobileOnly(Component.Spacer()),
+    // Mobile-only TOC: helps users navigate through content (compact and mobile-friendly)
     Component.MobileOnly(Component.TableOfContents()),
-    Component.MobileOnly(Component.Spacer()),
+
+    Component.MobileOnly(Component.Spacer()), // Gives extra space for mobile content
   ],
 
-  // Left column: navigation; keep lightweight for mobile
+  // Left column: keep light items like Explorer, but hide recent notes on mobile
   left: [
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer(),
-    Component.RecentNotes(),
+    Component.DesktopOnly(Component.RecentNotes()), // Keep RecentNotes for Desktop only
     Component.MobileOnly(Component.Spacer()),
   ],
 
-  // Right column: make these desktop-only to avoid mobile jank
+  // Right column: remove bulky items on mobile
   right: [
-    Component.DesktopOnly(Component.Graph()),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.DesktopOnly(Component.Backlinks()),
+    Component.DesktopOnly(Component.Graph()),  // Graph is bulky on small screens
+    Component.DesktopOnly(Component.Backlinks()), // Hide on mobile for smoother experience
   ],
 }
 
@@ -81,14 +74,12 @@ export const defaultListPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
 
-    // Mobile-only TOC can still help on long list pages (optional but nice)
-    Component.MobileOnly(Component.Spacer()),
+    // Mobile TOC for long lists of content
     Component.MobileOnly(Component.TableOfContents()),
-    Component.MobileOnly(Component.Spacer()),
   ],
 
   left: [
-    // On list pages, keep title/search/darkmode as a mobile-friendly cluster too
+    // Keep the Explorer visible and accessible on mobile, but avoid extra elements
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer(),
     Component.MobileOnly(Component.Spacer()),
