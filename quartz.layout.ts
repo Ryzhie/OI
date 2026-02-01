@@ -60,9 +60,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
   ],
 
-  // Right column: remove bulky items on mobile
+  // Right column: include Graph in mobile view and hide bulky items on mobile
   right: [
-    Component.DesktopOnly(Component.Graph()),  // Graph is bulky on small screens
+    Component.MobileOnly(Component.Graph()),  // Graph is now visible on mobile
     Component.DesktopOnly(Component.Backlinks()), // Hide on mobile for smoother experience
   ],
 }

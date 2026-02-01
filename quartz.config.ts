@@ -37,8 +37,8 @@ const config: QuartzConfig = {
           dark: "#111827",        // main text (high contrast)
 
           // Accents
-          secondary: "#2563EB",   // links / primary actions (blue)
-          tertiary: "#06B6D4",    // accents / tags (cyan)
+          secondary: "#1d8aac",   // links / primary actions (blue)
+          tertiary: "#079ab4",    // accents / tags (cyan)
 
           // Highlights
           highlight: "rgba(37, 99, 235, 0.10)",   // hover bg / block highlight
@@ -53,8 +53,9 @@ const config: QuartzConfig = {
           dark: "#F3F4F6",        // main text
 
           // Accents
-          secondary: "#60A5FA",   // links / primary actions (soft blue)
-          tertiary: "#22D3EE",    // accents / tags (bright cyan)
+          secondary: "#1d8aac",   // links / primary actions (blue)
+          tertiary: "#079ab4",    // accents / tags (cyan)
+
 
           // Highlights
           highlight: "rgba(96, 165, 250, 0.14)",  // hover bg / block highlight
