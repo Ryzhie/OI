@@ -29,26 +29,36 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b333a",
-          secondary: "#284b63",
-          tertiary: "#2e9aa8",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#02b3aa88",
+          // Surfaces
+          light: "#FCFCFD",       // page background (clean, slightly cool)
+          lightgray: "#EEF1F4",   // cards / separators
+          gray: "#C7CDD6",        // borders / subtle UI
+          darkgray: "#4B5563",    // muted text
+          dark: "#111827",        // main text (high contrast)
+
+          // Accents
+          secondary: "#2563EB",   // links / primary actions (blue)
+          tertiary: "#06B6D4",    // accents / tags (cyan)
+
+          // Highlights
+          highlight: "rgba(37, 99, 235, 0.10)",   // hover bg / block highlight
+          textHighlight: "#FDE68A",               // text marker highlight
         },
         darkMode: {
-          light: "#2b333a",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "rgb(132, 156, 165)",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#02b3aa88",
+          // Surfaces
+          light: "#0B1220",       // page background (deep navy)
+          lightgray: "#111B2E",   // cards / elevated surfaces
+          gray: "#22304A",        // borders / separators
+          darkgray: "#C7D2E0",    // muted text (still readable)
+          dark: "#F3F4F6",        // main text
+
+          // Accents
+          secondary: "#60A5FA",   // links / primary actions (soft blue)
+          tertiary: "#22D3EE",    // accents / tags (bright cyan)
+
+          // Highlights
+          highlight: "rgba(96, 165, 250, 0.14)",  // hover bg / block highlight
+          textHighlight: "#FBBF24AA",             // translucent warm marker
         },
       },
     },
