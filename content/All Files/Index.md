@@ -5,7 +5,7 @@ longform:
   workflow: Default Workflow
   sceneFolder: /
   scenes:
-    - Introduction
+    - Metathoughting - 1
   sceneTemplate: templates/Chapter.md
   ignoredFiles: []
 ---
