@@ -1,3 +1,33 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// 1. Add side margins for mobile to make it feel modular
+@media all and (max-width: $breakpoints.mobile) {
+  .page {
+    padding: 0 1rem; // Prevents text from hitting the screen edges
+  }
+
+  // 2. Fix the "weird" bottom list stacking
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--lightgray); // Subtle separator
+    
+    // Make components feel like distinct "cards"
+    & > .component {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+  }
+
+  // 3. Ensure the Graph has a specific height on mobile
+  .graph {
+    height: 300px; 
+    margin-bottom: 2rem;
+  }
+}
