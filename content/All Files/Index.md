@@ -4,8 +4,7 @@ longform:
   title: Iridescent
   workflow: Default Workflow
   sceneFolder: /
-  scenes:
-    - Metathoughting - 1
+  scenes: []
   sceneTemplate: templates/Chapter.md
   ignoredFiles: []
 ---

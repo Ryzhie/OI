@@ -1,1 +1,3 @@
 this is my obsidian digital garden, where I showcase my notes and thoughts...
+
+All credit for creation of the base of this project goes to Jacky Zhao, I am just using his project and building on it for my personal use.
