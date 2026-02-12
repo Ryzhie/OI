@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Ryzhe",
+    pageTitle: "Iridescent",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,8 +23,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Bitcount Single",
-        body: "Bitcount Single",
+        header: "Neuton",
+        body: "Neuton",
         code: "Bitcount Single",
       },
       colors: {
